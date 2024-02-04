@@ -11,6 +11,11 @@ import connectDB from "./config/db.js";
 import requestSchema from "./models/request.js";
 import unReadMessageSchema from "./models/unReadMsg.js";
 import notificationSchema from "./models/notification.js";
+import * as dotenv from 'dotenv' 
+dotenv.config()
+
+
+const PORT = process.env.PORT || 9000
 
 const app = express();
 const server = http.createServer(app);
