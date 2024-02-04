@@ -1,9 +1,9 @@
 import  mongoose from 'mongoose'
 
-// import * as dotenv from 'dotenv' 
-// dotenv.config()
+import * as dotenv from 'dotenv' 
+dotenv.config()
 mongoose.set('strictQuery', true);
-const URI = 'mongodb://127.0.0.1:27017'
+const URI = process.env.MONGO_URI
 
  const connectDB = async () => {
     try {
